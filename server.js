@@ -1,8 +1,13 @@
 const express = require('express');
 const ideasRouter = require('./routes/ideas');
 
+
 const app = express();
 const port = 4000;
+
+// Body parser middleware 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
 
 // Define a basic route
 app.get('/', (req, res) => {
