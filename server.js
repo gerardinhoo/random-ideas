@@ -1,9 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 const ideasRouter = require('./routes/ideas');
+const connectDB = require('./config/db');
+const port = process.env.PORT || 4000;
+
+connectDB();
 
 
 const app = express();
-const port = 4000;
 
 // Body parser middleware 
 app.use(express.json());
