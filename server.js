@@ -1,3 +1,4 @@
+const path = require('path');
 require('dotenv').config();
 const express = require('express');
 const ideasRouter = require('./routes/ideas');
@@ -6,8 +7,10 @@ const port = process.env.PORT || 4000;
 
 connectDB();
 
-
 const app = express();
+
+// Static Folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Body parser middleware 
 app.use(express.json());
