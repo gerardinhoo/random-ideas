@@ -39,7 +39,6 @@ router.post('/', async (req, res) => {
    try{
      const savedIdea = await idea.save();
      res.json({success: true, data: savedIdea});
-     console.log('ideas username', idea.username)
    }
    catch(error) {
       console.log(error);
@@ -81,9 +80,8 @@ router.delete('/:id', async (req, res) => {
       // Match the usernames
       if(idea.username === req.body.username) {
          await Idea.findByIdAndDelete(req.params.id);
-         res.json({success: true, message: 'Idea Successfully Deleted', data: {}})
+         return res.json({success: true, message: 'Idea Successfully Deleted', data: {}})
       }
-
       // Usernames do not match
       res.status(403).json({success: false, error: 'You are not authorized to delete this account'});
    } 
@@ -92,7 +90,5 @@ router.delete('/:id', async (req, res) => {
       res.status(500).json({success: false, error: 'Something went wrong'});
    }  
 })
-
-
 
 module.exports = router;

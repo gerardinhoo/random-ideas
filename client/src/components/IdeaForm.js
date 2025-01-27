@@ -6,7 +6,6 @@ class IdeaForm {
       this._formModal = document.querySelector('#form-modal');
       this._ideaList = new IdeaList();
       this._form = null; // initialize here
-
    }
 
    addEventListeners() {
