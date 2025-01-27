@@ -1,6 +1,7 @@
 const path = require('path');
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const ideasRouter = require('./routes/ideas');
 const connectDB = require('./config/db');
 const port = process.env.PORT || 4000;
@@ -15,6 +16,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Body parser middleware 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
+
+// cors middleware
+app.use(
+  cors({
+    origin: ['http://localhost:4000/api/ideas', 'http://localhost:3000'],
+    credentials: true
+  })
+)
 
 // Define a basic route
 app.get('/', (req, res) => {
