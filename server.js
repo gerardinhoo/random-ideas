@@ -17,13 +17,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 
-// cors middleware
-app.use(
+// cors middleware Local - 
+
+/* app.use(
   cors({
-    origin: ['http://localhost:4000/api/ideas', 'http://localhost:3000'],
-    credentials: true
-  })
-)
+     origin: ['http://localhost:4000/api/ideas', 'http://localhost:3000'],
+     credentials: true
+   })
+ )
+*/
+
+// Prod config for deployment
+if (process.env.NODE_ENV !== "production") {
+  const cors = require("cors");
+    app.use(
+      cors({
+        origin: ["http://localhost:5000", "http://localhost:3000"],
+        credentials: true,
+      })
+    );
+}
 
 // Define a basic route
 app.get('/', (req, res) => {
