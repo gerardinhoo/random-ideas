@@ -1,5 +1,5 @@
 
-# Random Ideas App: A Fullstack Project with Vanila JavaScipt
+# Random Ideas App: A fullstack project with Vanilla JavaScript
 
 ####  Front Technologies used: JavaScript( Webpack, Async Await, Local storage)
 
