@@ -3,11 +3,11 @@
 
 ####  Front Technologies used: JavaScript( Webpack, Async Await, Local storage)
 
-##### Backend Technologies: Node JS, Express JS
+#### Backend Technologies: Node JS, Express JS
 
-#### Database: Mongo DB
+### Database: Mongo DB
 
-### How To run the App Locally:
+## How To run the App Locally:
 
 #### Run npm i to install the packages.
 
@@ -17,7 +17,12 @@
 
 
 
-<img width="425" alt="Screenshot 2025-01-27 at 8 58 16 PM" src="https://github.com/user-attachments/assets/6d58de7c-59e6-4cdf-a72d-4223bc368768" />
+
+<img width="423" alt="Screenshot 2025-01-27 at 9 00 41 PM" src="https://github.com/user-attachments/assets/5e3ecf37-2147-4a1a-94e3-9408d4a07db4" />
+
+
+
+
 
 
 
