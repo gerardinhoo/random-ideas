@@ -1,11 +1,11 @@
 
 # Random Ideas App: A Fullstack Project with Vanila JavaScipt
 
-##  Front Technologies used: JavaScript( Webpack, Async Await, Local storage)
+####  Front Technologies used: JavaScript( Webpack, Async Await, Local storage)
 
-## Backend Technologies: Node JS, Express JS
+##### Backend Technologies: Node JS, Express JS
 
-## Database: Mongo DB
+#### Database: Mongo DB
 
 ### How To run the App Locally:
 
